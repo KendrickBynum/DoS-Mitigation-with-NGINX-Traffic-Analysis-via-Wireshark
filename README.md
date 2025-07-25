@@ -41,7 +41,7 @@ This screenshot captures the full lifecycle of the Slowloris attack:
 ### 4. **🧠 Analyzed Traffic Behavior**
 - Used `tcp.flags.syn == 1 && tcp.flags.ack == 0` to identify SYN/ACK handshakes
 - Compared how many ports and sessions were opening and how fast
-| File         | Packets | Timeframe             | Description                                    |
+-| File         | Packets | Timeframe             | Description                                    |
 |--------------|---------|------------------------|------------------------------------------------|
 | `A.pcapng`   | 40,986  | ✅ **Before Attack**     | Baseline traffic with completed TCP handshakes |
 | `B.pcapng`   | 17,008  | ⚠️ **During/After Attack** | Contains SYN floods and half-open connections  |
