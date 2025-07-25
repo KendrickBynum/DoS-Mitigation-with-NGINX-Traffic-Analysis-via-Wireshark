@@ -60,3 +60,17 @@ This screenshot captures the full lifecycle of the Slowloris attack:
   ```nginx
   limit_conn_zone $binary_remote_addr zone=addr:10m;
   limit_conn addr 1;
+  
+## 💡 Key Takeaways
+
+- **Slowloris is extremely effective** at exhausting server resources without high bandwidth
+- **NGINX Amplify is a powerful tool** for visualizing server performance and attack patterns
+- **Wireshark allows fine-grained packet inspection** to confirm and analyze malicious behavior
+
+---
+
+## 🧠 Skills Practiced
+
+- Network traffic analysis (Wireshark filters, packet flags)
+- Web server performance monitoring (NGINX Amplify)
+- Security testing & simulation (Slowloris DoS)
