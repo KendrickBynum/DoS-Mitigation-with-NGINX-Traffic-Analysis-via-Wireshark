@@ -22,14 +22,17 @@ I monitored NGINX performance using **NGINX Amplify** and captured two sets of t
 ### 2. **📈 Captured System Metrics with NGINX Amplify**
 - Monitored CPU, memory, and network impact before, during, and after the attack
 
-**Before Attack**  
-![Before Attack](screenshots/amplify_dashboard_before.png)
+### 🧠 NGINX Amplify Before–During–After View
 
-**During Attack**  
-![During Attack](screenshots/amplify_dashboard_during.png)
+This screenshot captures the full lifecycle of the Slowloris attack:
 
-**After Mitigation**  
-![After Mitigation](screenshots/amplify_dashboard_after.png)
+<img width="1911" height="728" alt="image" src="https://github.com/user-attachments/assets/085dba0b-9b5c-48c7-a573-ef591033bfef" />
+
+- **Before** (left): System shows low CPU, traffic, and load average
+- **During** (middle): Sharp spikes in CPU usage, load average, and outbound traffic as the DoS attack begins
+- **After** (right): Metrics decline as the attack ends and the server stabilizes
+
+---
 
 ### 3. **🔬 Captured PCAP Files with Wireshark**
 - `A.pcapng`: Normal baseline traffic  
