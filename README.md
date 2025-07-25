@@ -41,12 +41,18 @@ This screenshot captures the full lifecycle of the Slowloris attack:
 ### 4. **🧠 Analyzed Traffic Behavior**
 - Used `tcp.flags.syn == 1 && tcp.flags.ack == 0` to identify SYN/ACK handshakes
 - Compared how many ports and sessions were opening and how fast
+| File         | Packets | Timeframe             | Description                                    |
+|--------------|---------|------------------------|------------------------------------------------|
+| `A.pcapng`   | 40,986  | ✅ **Before Attack**     | Baseline traffic with completed TCP handshakes |
+| `B.pcapng`   | 17,008  | ⚠️ **During/After Attack** | Contains SYN floods and half-open connections  |
+
+📸 **Side-by-Side Analysis**:
 
 **Normal Traffic (SYN/ACK filter)**  
-![Normal SYN-ACK](screenshots/syn_ack_filter_A.png)
+<img width="1919" height="1032" alt="image" src="https://github.com/user-attachments/assets/2e2fdb55-567d-452c-b975-7302d495d3ee" />
 
 **Attack Traffic (SYN flood)**  
-![SYN Flood](screenshots/syn_ack_filter_B.png)
+<img width="1919" height="1034" alt="image" src="https://github.com/user-attachments/assets/bbb06514-8fbb-4f89-aecf-8c450c711dc4" />
 
 ### 5. **🛡️ Applied NGINX Rate Limiting**
 - Edited `nginx.conf` with:
